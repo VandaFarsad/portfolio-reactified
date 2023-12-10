@@ -1,8 +1,8 @@
 version: "3.9"
 
 services:
-  postgres:
-    container_name: postgres-service
+  portfolio-reactified-database:
+    container_name: portfolio-reactified-database
     healthcheck:
       test: "pg_isready -h localhost -p 5432 -q -U postgres -d postgres"
       interval: 3s
@@ -11,7 +11,7 @@ services:
     image: postgres:14-alpine
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
-      POSTGRES_DB: django-react-service
+      POSTGRES_DB: portfolio-reactified-service
     env_file: .env.local
     volumes:
       - /var/lib/postgresql/data/
@@ -19,13 +19,13 @@ services:
       - "5432:5432"
     restart: always
 
-  django-react-frontend:
+  portfolio-reactified-frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
       target: deps
-    container_name: django-react-frontend
-    image: django-react-frontend
+    container_name: portfolio-reactified-frontend
+    image: portfolio-reactified-frontend
     volumes:
       - ./frontend:/app
       - /app/node_modules
@@ -33,18 +33,18 @@ services:
       - 3000:3000
     command: npm start
 
-  django-react-backend:
+  portfolio-reactified-backend:
     build:
       context: .
       dockerfile: Dockerfile
     entrypoint: bash /code/docker-entrypoint.sh
-    container_name: django-react-backend
-    image: django-react-backend
+    container_name: portfolio-reactified-backend
+    image: portfolio-reactified-backend
     volumes:
       - .:/code
-      - ../django-react-backend-logs:/logs
+      - ../portfolio-reactified-backend-logs:/logs
     ports:
       - 8000:8000
     env_file: .env.local
     depends_on:
-      - postgres
+      - portfolio-reactified-database
