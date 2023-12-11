@@ -1,17 +1,16 @@
 import { TypeAnimation } from "react-type-animation";
+import manAtWork from "../assets/man_at_work.svg";
 
 const Header = () => {
   return (
-    <div>
+    <div className="Header">
+      <img className="responsiveImage" src={manAtWork} alt="Vanda" />
       <div>
         <TypeAnimation
-          sequence={[
-            // Same substring at the start will only be typed out once, initially
-            "Hey! I'm Vanda",
-          ]}
+          sequence={["Hey! I'm Vanda"]}
           wrapper="span"
           speed={30}
-          style={{ fontSize: "3em", display: "inline-block" }}
+          style={{ fontSize: "1.5em", display: "inline-block" }}
           repeat={0}
           cursor={false}
         />
@@ -19,9 +18,8 @@ const Header = () => {
       <div>
         <TypeAnimation
           sequence={[
-            // Same substring at the start will only be typed out once, initially
             "Senior Backend Developer",
-            1000, // wait 1s before replacing "Mice" with "Hamsters"
+            1000, // wait 1s
             "DevOps experienced",
             1000,
             "Fullstack Developer",
@@ -29,7 +27,7 @@ const Header = () => {
           ]}
           wrapper="span"
           speed={50}
-          style={{ fontSize: "2em", display: "inline-block" }}
+          style={{ fontSize: "1em", display: "inline-block" }}
           repeat={Infinity}
         />
       </div>
