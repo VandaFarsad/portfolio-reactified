@@ -8,12 +8,10 @@ import "react-vertical-timeline-component/style.min.css";
 
 const Experience = () => {
   return (
-    <section id="resume" className="pb-20 bg-slate-500">
+    <section id="resume" className="bg-slate-500">
       <div className="col-md-12 mx-auto pb-10 pt-8">
-        <div className="col-md-12">
-          <h1 className="container mx-auto flex flex-col items-center text-2xl font-sans">
-            <span className="mb-2 text-2xl tracking-tight text-gray-900 pt-20">Experience</span>
-          </h1>
+        <div className="container mx-auto flex flex-col items-center">
+          <p className="text-4xl font-bold inline border-b-4 border-pink-600">Erfahrungen</p>
         </div>
       </div>
       <div className="col-md-8 mx-auto">
