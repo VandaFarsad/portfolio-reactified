@@ -1,5 +1,7 @@
 import "./App.css";
 import About from "./components/About";
+import Experience from "./components/Experience";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 function App() {
@@ -7,6 +9,8 @@ function App() {
     <div className="App">
       <Header />
       <About />
+      <Experience />
+      <Footer />
     </div>
   );
 }
