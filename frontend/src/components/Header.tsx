@@ -6,7 +6,7 @@ const Header = () => {
     <div className="font-mono container mx-auto flex px-10 py-20 flex-col items-center">
       <img className="max-w-sm md:max-w-lg" alt="hero" src={manAtWork} />
       <h1 className="font-semibold pt-2 md:pt-8 text-xl md:text-2xl ">
-        <TypeAnimation sequence={["Vanda Farsad"]} wrapper="span" speed={30} repeat={0} cursor={false} />
+        <TypeAnimation sequence={["Dr. Vanda Farsad"]} wrapper="span" speed={30} repeat={0} cursor={false} />
       </h1>
       <div>
         <TypeAnimation

@@ -1,6 +1,8 @@
 import WorkIcon from "@mui/icons-material/HomeWorkOutlined";
 import HourglassTopIcon from "@mui/icons-material/HourglassTopOutlined";
 import SchoolIcon from "@mui/icons-material/SchoolOutlined";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
@@ -22,9 +24,16 @@ const Experience = () => {
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={<WorkIcon />}
           >
-            <h3 className="vertical-timeline-element-title">Freelance Backend Developer</h3>
+            <h3 className="text-xl font-semibold">Freelance Backend Developer</h3>
             <h4 className="vertical-timeline-element-subtitle">Orendt Studios, Hamburg</h4>
-            <p>Web-Entwicklung, Projekt-Managment</p>
+            <Stack direction="row" spacing={1} className="pt-4 text-xs">
+              <Chip label="Django" />
+              <Chip label="Docker" />
+              <Chip label="Kubernetes" />
+              <Chip label="Gitlab-CI" />
+              <Chip label="Next.js" />
+              <Chip label="React.js" />
+            </Stack>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -33,9 +42,13 @@ const Experience = () => {
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={<WorkIcon />}
           >
-            <h3 className="vertical-timeline-element-title">Biostatistiker</h3>
+            <h3 className="text-xl font-semibold">Biostatistiker</h3>
             <h4 className="vertical-timeline-element-subtitle">Ecker+Ecker, Hamburg</h4>
-            <p>Statistik, Software-Entwicklung, Schulungen</p>
+            <Stack direction="row" spacing={1} className="pt-4 text-xs">
+              <Chip label="Python" />
+              <Chip label="R" />
+              <Chip label="SAS" />
+            </Stack>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -44,9 +57,11 @@ const Experience = () => {
             iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
             icon={<SchoolIcon />}
           >
-            <h3 className="vertical-timeline-element-title">Mathematik</h3>
-            <h4 className="vertical-timeline-element-subtitle">Doktor der Naturwissenschaft</h4>
-            <p>Kategorientheory, Konforme Feldtheroien</p>
+            <h3 className="text-xl font-semibold">Doktor der Naturwissenschaften</h3>
+            <h4 className="vertical-timeline-element-subtitle">Mathematik, Universität Hamburg</h4>
+            <Stack direction="row" spacing={1} className="pt-4 text-xs">
+              <Chip label="Mathematica" />
+            </Stack>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -55,9 +70,11 @@ const Experience = () => {
             iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
             icon={<SchoolIcon />}
           >
-            <h3 className="vertical-timeline-element-title">Master of Science</h3>
-            <h4 className="vertical-timeline-element-subtitle">Mathematik</h4>
-            <p>Geometrie, Algebra, Kernphysik</p>
+            <h3 className="text-xl font-semibold">Master of Science</h3>
+            <h4 className="vertical-timeline-element-subtitle">Mathematik, TU Darmstadt</h4>
+            <Stack direction="row" spacing={1} className="pt-4 text-xs">
+              <Chip label="MATLAB" />
+            </Stack>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -66,9 +83,13 @@ const Experience = () => {
             iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
             icon={<SchoolIcon />}
           >
-            <h3 className="vertical-timeline-element-title">Mathematik</h3>
-            <h4 className="vertical-timeline-element-subtitle">Diplom (FH)</h4>
-            <p>Numerische Mathematik, Infomatik</p>
+            <h4 className="text-xl font-semibold">Diplom (FH)</h4>
+            <h3 className="vertical-timeline-element-subtitle">Mathematik, Hochschule Darmstadt</h3>
+            <Stack direction="row" spacing={1} className="pt-4 text-xs">
+              <Chip label="C++" />
+              <Chip label="Mathematica" />
+              <Chip label="R" />
+            </Stack>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
