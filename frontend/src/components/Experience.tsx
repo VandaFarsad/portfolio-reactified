@@ -9,7 +9,7 @@ import "react-vertical-timeline-component/style.min.css";
 const Experience = () => {
   return (
     <section id="resume" className="pb-20 bg-slate-500">
-      <div className="col-md-12 mx-auto">
+      <div className="col-md-12 mx-auto pb-10 pt-8">
         <div className="col-md-12">
           <h1 className="container mx-auto flex flex-col items-center text-2xl font-sans">
             <span className="mb-2 text-2xl tracking-tight text-gray-900 pt-20">Experience</span>
@@ -30,7 +30,7 @@ const Experience = () => {
               <Chip label="Django" />
               <Chip label="Docker" />
               <Chip label="Kubernetes" />
-              <Chip label="Gitlab-CI" />
+              <Chip label="Gitlab" />
               <Chip label="Next.js" />
               <Chip label="React.js" />
             </Stack>
@@ -46,6 +46,7 @@ const Experience = () => {
             <h4 className="vertical-timeline-element-subtitle">Ecker+Ecker, Hamburg</h4>
             <Stack direction="row" spacing={1} className="pt-4 text-xs">
               <Chip label="Python" />
+              <Chip label="Git" />
               <Chip label="R" />
               <Chip label="SAS" />
             </Stack>
@@ -59,9 +60,6 @@ const Experience = () => {
           >
             <h3 className="text-xl font-semibold">Doktor der Naturwissenschaften</h3>
             <h4 className="vertical-timeline-element-subtitle">Mathematik, Universität Hamburg</h4>
-            <Stack direction="row" spacing={1} className="pt-4 text-xs">
-              <Chip label="Mathematica" />
-            </Stack>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -72,9 +70,6 @@ const Experience = () => {
           >
             <h3 className="text-xl font-semibold">Master of Science</h3>
             <h4 className="vertical-timeline-element-subtitle">Mathematik, TU Darmstadt</h4>
-            <Stack direction="row" spacing={1} className="pt-4 text-xs">
-              <Chip label="MATLAB" />
-            </Stack>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -85,11 +80,6 @@ const Experience = () => {
           >
             <h4 className="text-xl font-semibold">Diplom (FH)</h4>
             <h3 className="vertical-timeline-element-subtitle">Mathematik, Hochschule Darmstadt</h3>
-            <Stack direction="row" spacing={1} className="pt-4 text-xs">
-              <Chip label="C++" />
-              <Chip label="Mathematica" />
-              <Chip label="R" />
-            </Stack>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
