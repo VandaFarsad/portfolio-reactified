@@ -3,7 +3,7 @@ import { iconData } from "../api/iconData";
 
 const Stack = () => {
   return (
-    <section id="stack" className="w-full h-screen font-sans flex flex-col justify-center items-center">
+    <section id="stack" className="w-full p-40 font-sans flex flex-col justify-center items-center">
       <div className="col-md-12 mx-auto pb-10 pt-8">
         <div className="sm:text-right pb-8 pl-4">
           <p className="text-4xl font-bold inline border-b-4 border-pink-600">Tech Stack</p>
