@@ -11,9 +11,9 @@ const About = () => {
           <p className="text-2xl sm:text-4xl font-bold inline border-b-4 border-pink-600">About</p>
         </div>
       </div>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:px-10 lg:px-40 px-4">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-16 md:px-10 lg:px-40 px-4">
         <img
-          className="rounded-2xl shadow-2xl shadow-slate-300 max-w-xs sm:max-w-sm md:max-w-full mx-auto sm:mr-4"
+          className="rounded-2xl shadow-2xl shadow-slate-300 max-w-xs sm:max-w-sm sm:max-h-xl mx-auto sm:mr-4"
           src={photo}
           alt="portrait"
         />
