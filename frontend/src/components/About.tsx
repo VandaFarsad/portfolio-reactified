@@ -18,9 +18,10 @@ const About = () => {
           <p>
             Mein Name ist Vanda. Mit meinen Python-Kenntnissen und meinem Wissen über DevOps und Frontend-Technologien
             freue ich mich darauf, dich bei der Konzeption, Entwicklung und Optimierung deiner Webanwendungen zu
-            unterstützen.
-            <br /> <br />
-            Lass uns gemeinsam neue und effiziente Lösungen entwickeln, die den Zielen deines Unternehmens entsprechen.
+            unterstützen. 
+            <br /><br />
+            Lass uns gemeinsam neue und effiziente Lösungen entwickeln, die den Zielen deines Unternehmens
+            entsprechen.
           </p>
         </article>
       </div>
