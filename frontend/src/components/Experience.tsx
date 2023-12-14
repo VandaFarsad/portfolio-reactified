@@ -1,8 +1,8 @@
 import WorkIcon from "@mui/icons-material/HomeWorkOutlined";
 import HourglassTopIcon from "@mui/icons-material/HourglassTopOutlined";
 import SchoolIcon from "@mui/icons-material/SchoolOutlined";
+import { Grid } from "@mui/material";
 import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
@@ -24,14 +24,26 @@ const Experience = () => {
           >
             <h3 className="text-xl font-semibold">Freelance Backend Developer</h3>
             <h4 className="vertical-timeline-element-subtitle">Orendt Studios, Hamburg</h4>
-            <Stack direction="row" spacing={1} className="pt-4 text-xs">
-              <Chip label="Django" />
-              <Chip label="Docker" />
-              <Chip label="Kubernetes" />
-              <Chip label="Gitlab" />
-              <Chip label="Next.js" />
-              <Chip label="React.js" />
-            </Stack>
+            <Grid container spacing={1} className="pt-4 text-xs">
+              <Grid item xs={6} sm={4} md={2}>
+                <Chip label="Django" />
+              </Grid>
+              <Grid item xs={6} sm={4} md={2}>
+                <Chip label="Docker" />
+              </Grid>
+              <Grid item xs={6} sm={4} md={2}>
+                <Chip label="Kubernetes" />
+              </Grid>
+              <Grid item xs={6} sm={4} md={2}>
+                <Chip label="Gitlab" />
+              </Grid>
+              <Grid item xs={6} sm={4} md={2}>
+                <Chip label="Next.js" />
+              </Grid>
+              <Grid item xs={6} sm={4} md={2}>
+                <Chip label="React.js" />
+              </Grid>
+            </Grid>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -42,12 +54,20 @@ const Experience = () => {
           >
             <h3 className="text-xl font-semibold">Biostatistiker</h3>
             <h4 className="vertical-timeline-element-subtitle">Ecker+Ecker, Hamburg</h4>
-            <Stack direction="row" spacing={1} className="pt-4 text-xs">
-              <Chip label="Python" />
-              <Chip label="Git" />
-              <Chip label="R" />
-              <Chip label="SAS" />
-            </Stack>
+            <Grid container spacing={1} className="pt-4 text-xs">
+              <Grid item xs={6} sm={4} md={2}>
+                <Chip label="Python" />
+              </Grid>
+              <Grid item xs={6} sm={4} md={2}>
+                <Chip label="Git" />
+              </Grid>
+              <Grid item xs={6} sm={4} md={2}>
+                <Chip label="R" />
+              </Grid>
+              <Grid item xs={6} sm={4} md={2}>
+                <Chip label="SAS" />
+              </Grid>
+            </Grid>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
