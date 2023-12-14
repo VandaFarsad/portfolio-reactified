@@ -1,5 +1,9 @@
 export const iconData = [
   {
+    icon: "logos:python",
+    text: "Python",
+  },
+  {
     icon: "skill-icons:django",
     text: "Django",
   },
