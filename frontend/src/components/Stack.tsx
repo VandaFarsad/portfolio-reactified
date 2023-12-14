@@ -14,7 +14,7 @@ const Stack = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-8 px-4">
         {iconData.map((data, index) => (
           <div key={index} className="flex flex-col justify-center items-center px-4 sm:px-8">
-            <Icon icon={data.icon} height={isSmallScreen ? 50 : 125} />
+            <Icon icon={data.icon} height={isSmallScreen ? 75 : 125} />
             <p className="text-sm sm:text-base">{data.text}</p>
           </div>
         ))}
