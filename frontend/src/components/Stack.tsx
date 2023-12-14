@@ -7,7 +7,7 @@ const Stack = () => {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setIsSmallScreen(window.innerWidth < 600);
+      setIsSmallScreen(window.innerWidth < 641);
     });
   }, []);
 
