@@ -2,18 +2,20 @@ import { Icon } from "@iconify/react";
 import { iconData } from "../api/iconData";
 
 const Stack = () => {
+  const isSmallScreen = window.innerWidth < 600;
+
   return (
-    <section id="stack" className="w-full p-40 font-sans flex flex-col justify-center items-center">
+    <section id="stack" className="w-full p-4 sm:p-10 md:p-40 font-sans flex flex-col justify-center items-center">
       <div className="col-md-12 mx-auto pb-10 pt-8">
         <div className="sm:text-right pb-8 pl-4">
-          <p className="text-4xl font-bold inline border-b-4 border-pink-600">Tech Stack</p>
+          <p className="text-2xl sm:text-4xl font-bold inline border-b-4 border-pink-600">Tech Stack</p>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-8 px-4">
         {iconData.map((data, index) => (
-          <div key={index} className="flex flex-col justify-center items-center px-8">
-            <Icon icon={data.icon} height={125} />
-            <p>{data.text}</p>
+          <div key={index} className="flex flex-col justify-center items-center px-4 sm:px-8">
+            <Icon icon={data.icon} height={isSmallScreen ? 50 : 125} />
+            <p className="text-sm sm:text-base">{data.text}</p>
           </div>
         ))}
       </div>
