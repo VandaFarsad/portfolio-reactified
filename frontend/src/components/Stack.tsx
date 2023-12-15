@@ -22,7 +22,7 @@ const Stack = () => {
           <div key={index} className="flex flex-col justify-center items-center px-4 sm:px-8">
             <span
               className={
-                "lg:h-20 lg:w-20 md:h-15 md:w-15 h-10 w-10 icon-[" + data.iconSetPrefix + "--" + data.iconName + "]"
+                "lg:h-20 lg:w-20 md:h-14 md:w-14 h-10 w-10 icon-[" + data.iconSetPrefix + "--" + data.iconName + "]"
               }
             ></span>
             <p className="text-sm sm:text-base">{data.text}</p>
