@@ -1,34 +1,42 @@
 export const iconData = [
   {
-    icon: "logos:python",
+    iconSetPrefix: "logos",
+    iconName: "python",
     text: "Python",
   },
   {
-    icon: "skill-icons:django",
+    iconSetPrefix: "skill-icons",
+    iconName: "django",
     text: "Django",
   },
   {
-    icon: "skill-icons:docker",
+    iconSetPrefix: "skill-icons",
+    iconName: "docker",
     text: "Docker",
   },
   {
-    icon: "logos:kubernetes",
+    iconSetPrefix: "logos",
+    iconName: "kubernetes",
     text: "Kubernetes",
   },
   {
-    icon: "logos:gitlab",
+    iconSetPrefix: "logos",
+    iconName: "gitlab",
     text: "Gitlab",
   },
   {
-    icon: "skill-icons:typescript",
+    iconSetPrefix: "skill-icons",
+    iconName: "typescript",
     text: "TypeScript",
   },
   {
-    icon: "devicon:nextjs",
+    iconSetPrefix: "devicon",
+    iconName: "nextjs",
     text: "Next.js",
   },
   {
-    icon: "logos:react",
+    iconSetPrefix: "logos",
+    iconName: "react",
     text: "React.js",
   },
 ];

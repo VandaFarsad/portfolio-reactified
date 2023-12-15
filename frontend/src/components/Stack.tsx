@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
 import { iconData } from "../api/iconData";
 
@@ -21,7 +20,11 @@ const Stack = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-8 px-4">
         {iconData.map((data, index) => (
           <div key={index} className="flex flex-col justify-center items-center px-4 sm:px-8">
-            <Icon icon={data.icon} height={isSmallScreen ? 50 : 100} />
+            <span
+              className={
+                "lg:h-20 lg:w-20 md:h-15 md:w-15 h-10 w-10 icon-[" + data.iconSetPrefix + "--" + data.iconName + "]"
+              }
+            ></span>
             <p className="text-sm sm:text-base">{data.text}</p>
           </div>
         ))}
