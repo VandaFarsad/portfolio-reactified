@@ -1,10 +1,6 @@
-import { iconData } from "../api/iconData";
+import { iconDataTailwind } from "../api/iconData";
 
 const Stack = () => {
-  const iconDataTailwind = iconData.map((item) => ({
-    ...item,
-    icon: "lg:h-20 lg:w-20 md:h-14 md:w-14 h-10 w-10 icon-[" + item.iconSetPrefix + "--" + item.iconName + "]",
-  }));
 
   return (
     <section id="stack" className="w-full p-4 sm:p-10 md:p-40 font-sans flex flex-col justify-center items-center">
