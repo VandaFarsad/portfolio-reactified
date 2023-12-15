@@ -5,8 +5,6 @@ COPY frontend/package*.json .
 RUN npm ci
 COPY ./frontend .
 RUN npm run build
-ARG CACHEBUST=2 # force rebuild
-RUN ls -l build
 
 FROM python:3.11-slim
 WORKDIR /code
