@@ -1,9 +1,11 @@
 import { TypeAnimation } from "react-type-animation";
 import manAtWork from "../assets/man_at_work.svg";
+import GitHubCorner from "./GitHubCorner";
 
 const Header = () => {
   return (
     <div className="w-full h-screen font-mono container mx-auto flex px-4 sm:px-10 py-10 sm:py-20 flex-col items-center justify-center">
+      <GitHubCorner />
       <img className="w-3/4 sm:max-w-sm md:max-w-lg" alt="hero" src={manAtWork} />
       <h1 className="font-semibold pt-2 md:pt-8 text-lg sm:text-xl md:text-2xl ">
         <TypeAnimation sequence={["Dr. Vanda Farsad"]} wrapper="span" speed={30} repeat={0} cursor={false} />
