@@ -1,7 +1,6 @@
 import { iconDataTailwind } from "../api/iconData";
 
 const Stack = () => {
-
   return (
     <section id="stack" className="w-full p-4 sm:p-10 md:p-40 font-sans flex flex-col justify-center items-center">
       <div className="col-md-12 mx-auto pb-10 pt-8">
