@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { StackIcon, fetchStackIcons } from "../api/iconData";
+import { StackIcon, fetchStackIcons } from "../api/stackIconData";
 
 type FetchState = "initial" | "loading" | "success" | "error";
 
