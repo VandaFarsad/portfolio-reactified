@@ -26,6 +26,7 @@ services:
       target: deps
     container_name: portfolio-reactified-frontend
     image: portfolio-reactified-frontend
+    env_file: ./frontend/.env.example
     volumes:
       - ./frontend:/app
       - /app/node_modules
