@@ -7,7 +7,7 @@ const About = () => {
       className="w-full p-4 sm:p-10 lg:p-40 font-sans bg-slate-500 flex flex-col justify-center items-center"
     >
       <p className="text-2xl sm:text-4xl font-bold inline border-b-4 border-pink-600">About</p>
-      <div className="w-full pt-8 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16">
+      <div className="w-full pt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 pb-6">
         <img
           className="rounded-2xl shadow-2xl shadow-slate-300 max-w-xs mx-auto sm:max-w-sm sm:max-h-xl lg:mr-4"
           src={photo}

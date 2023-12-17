@@ -8,7 +8,7 @@ const Stack = () => {
           <p className="text-2xl sm:text-4xl font-bold inline border-b-4 border-pink-600">Tech Stack</p>
         </div>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-8 px-4">
+      <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-8 px-4 pb-6">
         {iconDataTailwind.map((data, index) => (
           <div key={index} className="flex flex-col justify-center items-center px-4 sm:px-8">
             <span className={data.icon}></span>
