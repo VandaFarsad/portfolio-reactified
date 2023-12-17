@@ -1,3 +1,20 @@
+export type Experience = {
+  id: string;
+  type: string;
+  date: string;
+  title: string;
+  subtitle: string;
+  tags?: string[];
+};
+
+export const fetchExperiences = () => {
+  return fetch(`${process.env.REACT_APP_URL_API}/experiences`).then((res) =>
+    res.json() as Promise<Experience[]>
+  ) 
+};
+
+
+
 export const experienceData = [
   {
     id: "1",
