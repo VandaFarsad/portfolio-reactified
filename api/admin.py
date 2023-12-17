@@ -5,7 +5,7 @@ from api.models import Experience, StackIcon
 
 @admin.register(StackIcon)
 class StackIconAdmin(admin.ModelAdmin):
-    list_display = ("icon_set_prefix", "icon_name", "text", "icon")
+    list_display = ("position", "icon_set_prefix", "icon_name", "text", "icon")
     search_fields = ("icon_set_prefix", "icon_name", "text", "icon")
 
 

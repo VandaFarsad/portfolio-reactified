@@ -7,6 +7,10 @@ class StackIcon(models.Model):
     icon_name = models.CharField(max_length=100)
     text = models.CharField(max_length=100)
     icon = models.CharField(max_length=100)
+    position = models.IntegerField()
+
+    class Meta:
+        ordering = ("position",)
 
     def __str__(self):
         return self.text
@@ -18,6 +22,9 @@ class Experience(models.Model):
     title = models.CharField(max_length=100)
     subtitle = models.CharField(max_length=100)
     tags = ArrayField(models.CharField(max_length=100), blank=True)
+
+    class Meta:
+        ordering = ("-date",)
 
     def __str__(self):
         return self.title

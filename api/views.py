@@ -1,4 +1,4 @@
-from rest_framework import routers, serializers, viewsets
+from rest_framework import viewsets
 
 from api.models import Experience, StackIcon
 from api.serializers import ExperienceSerializer, StackIconSerializer
