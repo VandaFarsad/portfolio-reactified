@@ -159,7 +159,7 @@ else:
     ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "www.initial-commit.com",
+    "https://www.initial-commit.com",
 ]
 
 REST_FRAMEWORK = {
