@@ -34,8 +34,8 @@ const Experience = () => {
               {experience.tags && (
                 <Grid container spacing={1} className="pt-4 text-xs">
                   {experience.tags.map((tag) => (
-                    <Grid key={tag} item xs={6} sm={4} md={2}>
-                      <Chip label={tag} />
+                    <Grid key={tag} item xs={"auto"} sm={"auto"} md={"auto"}>
+                      <Chip label={tag} style={{ width: "100px", textOverflow: "ellipsis", overflow: "hidden" }} />
                     </Grid>
                   ))}
                 </Grid>
