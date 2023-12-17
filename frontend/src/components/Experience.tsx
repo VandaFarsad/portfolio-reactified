@@ -7,6 +7,10 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css";
 import { experienceData } from "../api/experienceData";
 
+const commonIconStyle = { color: "#fff" };
+const workIconStyle = { background: "rgb(33, 150, 243)", ...commonIconStyle };
+const educationIconStyle = { background: "rgb(233, 30, 99)", ...commonIconStyle };
+
 const Experience = () => {
   return (
     <section id="resume" className="w-full pt-4 sm:pt-10 md:pt-40 overflow-hidden bg-slate-500">
@@ -17,24 +21,21 @@ const Experience = () => {
       </div>
       <div className="col-md-8 mx-auto">
         <VerticalTimeline>
-          {experienceData.map((experience, index) => (
+          {experienceData.map((experience) => (
             <VerticalTimelineElement
-              key={index}
+              key={experience.id}
               className={`vertical-timeline-element--${experience.type}`}
               date={experience.date}
-              iconStyle={{
-                background: experience.type === "work" ? "rgb(33, 150, 243)" : "rgb(233, 30, 99)",
-                color: "#fff",
-              }}
+              iconStyle={experience.type === "work" ? workIconStyle : educationIconStyle}
               icon={experience.type === "work" ? <WorkIcon /> : <SchoolIcon />}
             >
               <h3 className="text-xl font-semibold">{experience.title}</h3>
               {experience.subtitle && <h4 className="vertical-timeline-element-subtitle">{experience.subtitle}</h4>}
               {experience.tags && (
                 <Grid container spacing={1} className="pt-4 text-xs">
-                  {experience.tags.map((tag, tagIndex) => (
-                    <Grid key={tagIndex} item xs={"auto"} sm={"auto"} md={"auto"}>
-                      <Chip label={tag} style={{ width: "100px", textOverflow: "ellipsis", overflow: "hidden" }} />
+                  {experience.tags.map((tag) => (
+                    <Grid key={tag} item xs={6} sm={4} md={2}>
+                      <Chip label={tag} />
                     </Grid>
                   ))}
                 </Grid>
@@ -42,7 +43,7 @@ const Experience = () => {
             </VerticalTimelineElement>
           ))}
           <VerticalTimelineElement
-            iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+            iconStyle={{ background: "rgb(16, 204, 82)", ...commonIconStyle }}
             icon={<HourglassTopIcon />}
           />
         </VerticalTimeline>
