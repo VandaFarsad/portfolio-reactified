@@ -5,6 +5,7 @@ import { Grid } from "@mui/material";
 import Chip from "@mui/material/Chip";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { experienceData } from "../api/experienceData";
 
 const Experience = () => {
   return (
@@ -16,90 +17,30 @@ const Experience = () => {
       </div>
       <div className="col-md-8 mx-auto">
         <VerticalTimeline>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - jetzt"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="text-xl font-semibold">Freelance Backend Developer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Orendt Studios, Hamburg</h4>
-            <Grid container spacing={1} className="pt-4 text-xs">
-              <Grid item xs={6} sm={4} md={2}>
-                <Chip label="Django" />
-              </Grid>
-              <Grid item xs={6} sm={4} md={2}>
-                <Chip label="Docker" />
-              </Grid>
-              <Grid item xs={6} sm={4} md={2}>
-                <Chip label="Kubernetes" />
-              </Grid>
-              <Grid item xs={6} sm={4} md={2}>
-                <Chip label="Gitlab" />
-              </Grid>
-              <Grid item xs={6} sm={4} md={2}>
-                <Chip label="Next.js" />
-              </Grid>
-              <Grid item xs={6} sm={4} md={2}>
-                <Chip label="React.js" />
-              </Grid>
-            </Grid>
-          </VerticalTimelineElement>
-
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2017 - 2019"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="text-xl font-semibold">Biostatistiker</h3>
-            <h4 className="vertical-timeline-element-subtitle">Ecker+Ecker, Hamburg</h4>
-            <Grid container spacing={1} className="pt-4 text-xs">
-              <Grid item xs={6} sm={4} md={2}>
-                <Chip label="Python" />
-              </Grid>
-              <Grid item xs={6} sm={4} md={2}>
-                <Chip label="Git" />
-              </Grid>
-              <Grid item xs={6} sm={4} md={2}>
-                <Chip label="R" />
-              </Grid>
-              <Grid item xs={6} sm={4} md={2}>
-                <Chip label="SAS" />
-              </Grid>
-            </Grid>
-          </VerticalTimelineElement>
-
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2014 - 2017"
-            iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-            icon={<SchoolIcon />}
-          >
-            <h3 className="text-xl font-semibold">Doktor der Naturwissenschaften</h3>
-            <h4 className="vertical-timeline-element-subtitle">Mathematik, Universität Hamburg</h4>
-          </VerticalTimelineElement>
-
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2009 - 2013"
-            iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-            icon={<SchoolIcon />}
-          >
-            <h3 className="text-xl font-semibold">Master of Science</h3>
-            <h4 className="vertical-timeline-element-subtitle">Mathematik, TU Darmstadt</h4>
-          </VerticalTimelineElement>
-
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2005 - 2009"
-            iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-            icon={<SchoolIcon />}
-          >
-            <h4 className="text-xl font-semibold">Diplom (FH)</h4>
-            <h3 className="vertical-timeline-element-subtitle">Mathematik, Hochschule Darmstadt</h3>
-          </VerticalTimelineElement>
-
+          {experienceData.map((experience, index) => (
+            <VerticalTimelineElement
+              key={index}
+              className={`vertical-timeline-element--${experience.type}`}
+              date={experience.date}
+              iconStyle={{
+                background: experience.type === "work" ? "rgb(33, 150, 243)" : "rgb(233, 30, 99)",
+                color: "#fff",
+              }}
+              icon={experience.type === "work" ? <WorkIcon /> : <SchoolIcon />}
+            >
+              <h3 className="text-xl font-semibold">{experience.title}</h3>
+              {experience.subtitle && <h4 className="vertical-timeline-element-subtitle">{experience.subtitle}</h4>}
+              {experience.tags && (
+                <Grid container spacing={1} className="pt-4 text-xs">
+                  {experience.tags.map((tag, tagIndex) => (
+                    <Grid key={tagIndex} item xs={"auto"} sm={"auto"} md={"auto"}>
+                      <Chip label={tag} style={{ width: "100px", textOverflow: "ellipsis", overflow: "hidden" }} />
+                    </Grid>
+                  ))}
+                </Grid>
+              )}
+            </VerticalTimelineElement>
+          ))}
           <VerticalTimelineElement
             iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
             icon={<HourglassTopIcon />}
