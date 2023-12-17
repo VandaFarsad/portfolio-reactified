@@ -7,50 +7,15 @@ export type Experience = {
   tags?: string[];
 };
 
-export const fetchExperiences = () => {
-  return fetch(`${process.env.REACT_APP_URL_API}/experiences`).then((res) =>
-    res.json() as Promise<Experience[]>
-  ) 
+export const fetchExperiences = async (): Promise<Experience[]> => {
+  try {
+    const response = await fetch(`${process.env.REACT_APP_URL_API}/experiences`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return (await response.json()) as Promise<Experience[]>;
+  } catch (error) {
+    console.error(`Failed to fetch Experiences: ${error}`);
+    return [];
+  }
 };
-
-
-
-export const experienceData = [
-  {
-    id: "1",
-    type: "work",
-    date: "2020 - jetzt",
-    title: "Freelance Backend Developer",
-    subtitle: "Orendt Studios, Hamburg",
-    tags: ["Django", "Docker", "Kubernetes", "Gitlab", "Next.js", "React.js"],
-  },
-  {
-    id: "2",
-    type: "work",
-    date: "2017 - 2019",
-    title: "Biostatistiker",
-    subtitle: "Ecker+Ecker, Hamburg",
-    tags: ["Python", "Git", "R", "SAS"],
-  },
-  {
-    id: "3",
-    type: "education",
-    date: "2014 - 2017",
-    title: "Doktor der Naturwissenschaften",
-    subtitle: "Mathematik, Universität Hamburg",
-  },
-  {
-    id: "4",
-    type: "education",
-    date: "2009 - 2013",
-    title: "Master of Science",
-    subtitle: "Mathematik, TU Darmstadt",
-  },
-  {
-    id: "5",
-    type: "education",
-    date: "2005 - 2009",
-    title: "Diplom (FH)",
-    subtitle: "Mathematik, Hochschule Darmstadt",
-  },
-];
