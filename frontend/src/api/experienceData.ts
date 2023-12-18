@@ -19,3 +19,4 @@ export const fetchExperiences = async (): Promise<Experience[]> => {
     return [];
   }
 };
+
