@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="container mx-auto px-10 py-4 flex flex-col items-center">
@@ -17,7 +19,12 @@ const Footer = () => {
       </div>
 
       <div className="py-4 text-center">
-        <small>Copyright &copy; Dr. Vanda Farsad</small>
+        <small>
+          Copyright &copy; Dr. Vanda Farsad |{" "}
+          <Link className="hover:underline" to="/impressum" target="_blank" rel="noopener noreferrer">
+            Impressum & Datenschutz
+          </Link>
+        </small>
       </div>
     </footer>
   );
