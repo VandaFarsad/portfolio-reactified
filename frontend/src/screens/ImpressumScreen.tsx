@@ -1,6 +1,6 @@
 import Impressum from "../components/Impressum";
 
-const MainScreen = () => {
+const ImpressumScreen = () => {
   return (
     <div>
       <Impressum />
@@ -8,4 +8,4 @@ const MainScreen = () => {
   );
 };
 
-export default MainScreen;
+export default ImpressumScreen;
