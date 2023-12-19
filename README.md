@@ -1,8 +1,8 @@
-# Django/React Boilerplate with TypeScript and Docker
+# Developers Portfolio Page with Django and React
 
 ## Introduction
 
-Welcome to the Django/React Boilerplate repository! This project provides a solid foundation for building web applications using the Django backend framework, React frontend library, TypeScript for type-safe JavaScript, and Docker for containerization.
+Welcome to the repository of my Portfolio Page! This project is a hybrid web application built using the Django backend framework and the React frontend library. It leverages the power of Django for server-side rendering and React for a dynamic and interactive user interface. TypeScript is used for type-safe JavaScript, and Docker is used for containerization.
 
 ## Prerequisites
 
