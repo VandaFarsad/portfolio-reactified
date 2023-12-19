@@ -30,7 +30,7 @@ docker compose up
 
 The application will be accessible at:
 
-- Backend (Django API): http://localhost:8000/
+- Backend (Django Admin Page): http://localhost:8000/admin
 - Frontend (React App): http://localhost:3000/
 
 For **production**, use the following command:
