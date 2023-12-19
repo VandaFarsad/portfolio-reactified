@@ -3,6 +3,10 @@ import manAtWork from "../assets/man_at_work.svg";
 import GitHubCorner from "./GitHubCorner";
 
 const Header = () => {
+  const handleEmailButtonClick = () => {
+    window.location.href = "mailto:contact@initial-commit.com";
+  };
+
   return (
     <div className="w-full h-screen font-mono container mx-auto flex px-4 sm:px-10 py-10 sm:py-20 flex-col items-center justify-center">
       <GitHubCorner />
@@ -25,6 +29,13 @@ const Header = () => {
           repeat={Infinity}
         />
       </div>
+      <button
+        className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded mt-4"
+        onClick={handleEmailButtonClick}
+        title="mailto:contact@initial-commit.com"
+      >
+        Contact Me
+      </button>
     </div>
   );
 };
