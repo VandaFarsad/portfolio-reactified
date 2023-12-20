@@ -142,6 +142,7 @@ STATIC_URL = "static/"
 if not DEBUG:
     STATICFILES_DIRS = [
         BASE_DIR / "frontend/build/static",
+        BASE_DIR / "frontend/public",
     ]
 
 STATIC_ROOT = BASE_DIR / "static"
