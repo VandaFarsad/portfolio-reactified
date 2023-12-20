@@ -8,7 +8,7 @@ grep -Po 'href="/\K(?!static)[^"]*' $input_file | while read -r line ; do
     sed -i "s|href=\"/$line\"|href=\"/static/$line\"|g" $input_file
 done
 
-echo "Initializing..."
+echo "Waiting for postgres to start..."
 python manage.py wait_for_db
 
 echo "Running migrations..."
