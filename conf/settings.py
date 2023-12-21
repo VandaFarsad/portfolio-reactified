@@ -142,6 +142,7 @@ STATIC_URL = "static/"
 if not DEBUG:
     STATICFILES_DIRS = [
         BASE_DIR / "frontend/build/static",
+        # For favicon.ico and manifest.json
         BASE_DIR / "frontend/public",
     ]
 
