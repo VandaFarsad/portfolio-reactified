@@ -20,7 +20,7 @@ const Footer = () => {
 
       <div className="py-4 text-center">
         <small>
-          Copyright &copy; Dr. Vanda Farsad |{" "}
+          Copyright &copy; Vanda Farsad |{" "}
           <Link className="hover:underline" to="/impressum" target="_blank" rel="noopener noreferrer">
             Impressum & Datenschutz
           </Link>
