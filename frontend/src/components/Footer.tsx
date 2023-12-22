@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="container mx-auto px-10 py-4 flex flex-col items-center">
+    <footer className="w-full overflow-hidden mx-auto px-10 py-4 flex flex-col items-center bg-white dark:bg-slate-800 text-black dark:text-white">
       <div className="flex space-x-4 mt-8 items-center">
         <a href="https://github.com/VandaFarsad" target="_blank" rel="noopener noreferrer">
           <span className={"h-7 w-7 icon-[mdi--github]"}></span>
@@ -29,5 +29,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

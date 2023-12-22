@@ -1,4 +1,12 @@
+import { useEffect, useState } from "react";
+
 const GitHubCorner = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    setIsDarkMode(document.documentElement.classList.contains("dark"));
+  }, []);
+
   return (
     <a
       href="https://github.com/VandaFarsad/portfolio-reactified"
@@ -12,8 +20,8 @@ const GitHubCorner = () => {
         height="80"
         viewBox="0 0 250 250"
         style={{
-          fill: "#151513",
-          color: "#fff",
+          fill: isDarkMode ? "#fff" : "#151513",
+          color: isDarkMode ? "#151513" : "#fff",
           position: "absolute",
           top: 0,
           border: 0,
