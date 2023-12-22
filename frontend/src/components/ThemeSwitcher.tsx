@@ -1,26 +1,24 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import ThemeContext from "../theme/ThemeContext";
 
 const ThemeSwitcher = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-  const [isLight, setIsLight] = useState(theme === "light" ? true : false);
+  const isDarkMode = document.documentElement.classList.contains("dark");
+  const [isDark, setIsDark] = useState(isDarkMode ? true : false);
 
   const toggleDarkMode = (checked: boolean) => {
-    setTheme(theme === "light" ? "dark" : "light");
-    setIsLight(checked);
-    if (theme === "light") {
-      document.documentElement.classList.add("dark");
-    } else {
+    setIsDark(checked);
+    if (isDarkMode) {
       document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
     }
-    console.log("Theme is now: ", theme);
+    console.log("Theme is now dark: ", !isDarkMode);
   };
 
   return (
     <>
       <div>
-        <DarkModeSwitch checked={isLight} onChange={toggleDarkMode} size={40} moonColor="black" sunColor="white" />
+        <DarkModeSwitch checked={isDark} onChange={toggleDarkMode} size={40} />
       </div>
     </>
   );
