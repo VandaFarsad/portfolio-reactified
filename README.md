@@ -65,6 +65,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 - Thanks to the developers of the following React libraries and resources used in this project:
   - [React Vertical Timeline](https://github.com/stephane-monnot/react-vertical-timeline)
   - [React Typical Animation](https://github.com/maxeth/react-type-animation)
+  - [React Toggle Dark Mode](https://github.com/JoseRFelix/react-toggle-dark-mode)
 - Thanks to [Iconify Design](https://iconify.design/icon-sets/?query=angular) for providing the icons.
 - Thanks to [Tholman](https://tholman.com/github-corners/) for the GitHub Ref Corner.
 - Thanks to [Dorota1997](https://github.com/Dorota1997/react-frontend-dev-portfolio/blob/main/README.md) for inspiration.
