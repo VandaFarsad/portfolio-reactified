@@ -46,6 +46,10 @@ const Experience = () => {
                   key={index}
                   className={`vertical-timeline-element--${type}`}
                   date={date}
+                  intersectionObserverProps={{
+                    rootMargin: "0px 0px 0% 0px",
+                    threshold: 0.1,
+                  }}
                   iconStyle={{ background: type === "work" ? "rgb(33, 150, 243)" : "rgb(233, 30, 99)", color: "#fff" }}
                   icon={type === "work" ? <WorkIcon /> : <SchoolIcon />}
                 >
