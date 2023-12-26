@@ -8,11 +8,11 @@ You can view a live demo of the application at [www.initial-commit.com](http://w
 
 ## Features
 
-- **Fetched Data**: The data for the Experience section is dynamically fetched from the Django backend. This allows for easy updating and maintenance of content.
-- **Responsive Design**: The application is fully responsive and automatically adapts to different screen sizes. It provides an optimal user experience on desktops, tablets, and mobile devices.
-- **Dark Mode**: The application supports a dark mode that can be toggled on and off through a switch in the user interface. This enhances the user experience, especially in low-light environments.
-- **Modern Technologies**: The application utilizes modern web technologies such as React for a dynamic user interface, Django for server-side rendering, and TypeScript for type-safe JavaScript.
-- **Docker Support**: The application can be run with Docker and Docker Compose, simplifying setup and deployment.
+- **Technologies**: Uses React, Django, and TypeScript.
+- **Fetched Data**: Dynamically fetched from Django backend.
+- **Responsive**: Adapts to all device screen sizes.
+- **Dark Mode**: Toggleable dark mode.
+- **Docker**: Supported for easy setup and deployment.
 
 ## Prerequisites
 
