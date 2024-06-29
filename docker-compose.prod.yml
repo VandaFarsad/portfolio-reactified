@@ -1,9 +1,7 @@
-version: "3.9"
-
 services:
   nginx:
     image: jonasal/nginx-certbot:latest
-    container_name: portfolio-reactified-nginx
+    container_name: stadtlueued-service-nginx
     restart: unless-stopped
     env_file:
       - ./nginx/nginx-certbot.env
@@ -16,22 +14,22 @@ services:
       - nginx_secrets:/etc/letsencrypt
       - ./nginx/user_conf.d:/etc/nginx/user_conf.d
     depends_on:
-      - portfolio-reactified-backend
+      - stadtlueued-service-backend
 
-  portfolio-reactified-backend:
+  stadtlueued-service-backend:
     build:
       context: .
       dockerfile: Dockerfile.prod
     entrypoint: bash /code/docker-entrypoint.prod.sh
-    container_name: portfolio-reactified-backend
-    image: portfolio-reactified-backend
+    container_name: stadtlueued-service-backend
+    image: stadtlueued-service-backend
     volumes:
-      - ../portfolio-reactified-backend-logs:/logs
+      - ../stadtlueued-service-backend-logs:/logs
       - static_volume:/code/static
       - media_volume:/code/media
       - nginx_secrets:/etc/letsencrypt
     ports:
-      - 8000:8000
+      - 8001:8001
     env_file: .env
     extra_hosts:
       - "host.docker.internal:host-gateway"

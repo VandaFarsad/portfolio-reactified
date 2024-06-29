@@ -1,8 +1,8 @@
 version: "3.9"
 
 services:
-  portfolio-reactified-database:
-    container_name: portfolio-reactified-database
+  stadtlueued-service-database:
+    container_name: stadtlueued-service-database
     healthcheck:
       test: "pg_isready -h localhost -p 5432 -q -U postgres -d postgres"
       interval: 3s
@@ -11,7 +11,7 @@ services:
     image: postgres:14-alpine
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
-      POSTGRES_DB: portfolio-reactified-service
+      POSTGRES_DB: stadtlueued-service-service
     env_file: .env.local
     volumes:
       - /var/lib/postgresql/data/
@@ -19,33 +19,33 @@ services:
       - "5432:5432"
     restart: always
 
-  portfolio-reactified-frontend:
+  stadtlueued-service-frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
       target: deps
-    container_name: portfolio-reactified-frontend
-    image: portfolio-reactified-frontend
+    container_name: stadtlueued-service-frontend
+    image: stadtlueued-service-frontend
     env_file: ./frontend/.env.example
     volumes:
       - ./frontend:/app
       - /app/node_modules
     ports:
-      - 3000:3000
+      - 3001:3001
     command: npm start
 
-  portfolio-reactified-backend:
+  stadtlueued-service-backend:
     build:
       context: .
       dockerfile: Dockerfile
     entrypoint: bash /code/docker-entrypoint.sh
-    container_name: portfolio-reactified-backend
-    image: portfolio-reactified-backend
+    container_name: stadtlueued-service-backend
+    image: stadtlueued-service-backend
     volumes:
       - .:/code
-      - ../portfolio-reactified-backend-logs:/logs
+      - ../stadtlueued-service-backend-logs:/logs
     ports:
-      - 8000:8000
+      - 8001:8001
     env_file: .env.local
     depends_on:
-      - portfolio-reactified-database
+      - stadtlueued-service-database

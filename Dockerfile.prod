@@ -12,5 +12,5 @@ COPY ./requirements*.txt .
 RUN pip install --no-cache-dir --upgrade -r requirements.prod.txt 
 COPY . .
 COPY --from=builder /app/build frontend/build
-EXPOSE 8000
+EXPOSE 8001
 ENTRYPOINT ["bash", "/code/docker-entrypoint.prod.sh"]

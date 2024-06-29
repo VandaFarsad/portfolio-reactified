@@ -28,8 +28,8 @@ Ensure you have the following tools installed on your machine:
 **Clone the repository:**
 
 ```bash
-git clone https://github.com/VandaFarsad/portfolio-reactified-boilerplate
-cd portfolio-reactified-boilerplate
+git clone https://github.com/VandaFarsad/stadtlueued-service-boilerplate
+cd stadtlueued-service-boilerplate
 ```
 
 **Start the application using Docker:**
