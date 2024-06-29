@@ -4,7 +4,7 @@
 
 Welcome to the repository of my Portfolio Page! This project is a hybrid web application built using the Django backend framework and the React frontend library. It leverages the power of Django for server-side rendering and React for a dynamic and interactive user interface. TypeScript is used for type-safe JavaScript, and Docker is used for containerization.
 
-You can view a live demo of the application at [www.initial-commit.com](http://www.initial-commit.com).
+You can view a live demo of the application at [www.stadtlueue.de](http://www.stadtlueue.de).
 
 ## Features
 
@@ -40,7 +40,7 @@ docker compose up
 
 The application will be accessible at:
 
-- Backend (Django Admin Page): http://localhost:8000/admin
+- Backend (Django Admin Page): http://localhost:8001/admin
 - Frontend (React App): http://localhost:3000/
 
 For **production**, use the following command:

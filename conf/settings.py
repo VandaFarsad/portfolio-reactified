@@ -158,11 +158,11 @@ if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 else:
     CORS_ALLOWED_ORIGINS = [
-        "https://www.initial-commit.com",
+        "https://www.stadtlueue.de",
     ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://www.initial-commit.com",
+    "https://www.stadtlueue.de",
 ]
 
 REST_FRAMEWORK = {

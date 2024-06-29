@@ -13,7 +13,7 @@ const Footer = () => {
         <a href="https://www.xing.com/profile/Vanda_Farsad" target="_blank" rel="noopener noreferrer">
           <span className={"h-7 w-7 icon-[mdi--xing]"}></span>
         </a>
-        <a href="mailto:contact@initial-commit.com">
+        <a href="mailto:contact@stadtlueue.de">
           <span className={"h-7 w-7 icon-[mdi--email]"}></span>
         </a>
       </div>

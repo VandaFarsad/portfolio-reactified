@@ -31,9 +31,9 @@ const Header = () => {
         />
       </div>
       <a
-        href={`mailto:contact@initial-commit.com`}
+        href={`mailto:contact@stadtlueue.de`}
         className="bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black font-bold py-2 px-4 rounded mt-4 inline-block"
-        title="mailto:contact@initial-commit.com"
+        title="mailto:contact@stadtlueue.de"
       >
         Contact me
       </a>

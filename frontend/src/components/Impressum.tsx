@@ -19,7 +19,7 @@ const Impressum = () => {
 
       <div className="mb-6">
         <strong className="text-lg font-bold">Kontakt:</strong>
-        <p className="mt-2 text-gray-700">E-Mail: contact@initial-commit.com</p>
+        <p className="mt-2 text-gray-700">E-Mail: contact@stadtlueue.de</p>
       </div>
 
       <section className="mb-6">
