@@ -2,7 +2,7 @@
 
 set -e
 
-echo "Starting docker-entrypoint.pord.sh"
+echo "Starting docker-entrypoint.prod.sh"
 
 echo "Modifying index.html to add /static to all hrefs that do not start with /static"
 input_file="frontend/build/index.html"
