@@ -1,5 +1,4 @@
 services:
-
   portfolio-reactified-backend:
     build:
       context: .
@@ -9,21 +8,24 @@ services:
     image: portfolio-reactified-backend
     volumes:
       - ../portfolio-reactified-backend-logs:/logs
-      - static_volume:/code/static
-      - media_volume:/code/media
+      - static_volume_initial-commit:/code/static
+      - media_volume_initial-commit:/code/media
       - nginx_secrets:/etc/letsencrypt
     ports:
       - 8000:8000
     env_file: .env
     extra_hosts:
-      - "host.docker.internal:172.18.0.1"
+        # host-gateway: IP of the gateway on the Docker network that your container use. 
+        # check ip address by running ´docker container inspect portfolio-reactified-backend´
+      - "host.docker.internal:host-gateway"  
     networks:
       - nginx_app-network
 
 volumes:
-  static_volume:
-  media_volume:
+  static_volume_initial-commit:
+  media_volume_initial-commit:
   nginx_secrets:
 
 networks:
   nginx_app-network:
+    external: true
