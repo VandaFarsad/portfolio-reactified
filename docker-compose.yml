@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   portfolio-reactified-database:
     container_name: portfolio-reactified-database
