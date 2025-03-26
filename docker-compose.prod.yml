@@ -17,7 +17,7 @@ services:
     extra_hosts:
         # host-gateway: IP of the gateway on the Docker network that your container use. 
         # check ip address by running ´docker container inspect portfolio-reactified-backend´
-      - "host.docker.internal:host-gateway"  
+      - host.docker.internal:host-gateway
     networks:
       - nginx_app-network
 
